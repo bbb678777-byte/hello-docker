@@ -1,6 +1,6 @@
 {
   "name": "hello-docker",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "学习 Git + Docker + 自动部署的示例程序（零依赖）",
   "main": "server.js",
   "private": true,

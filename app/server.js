@@ -55,7 +55,8 @@ function renderHome() {
       <tr><td>当前版本</td><td class="ver">v${VERSION}</td></tr>
       <tr><td>容器主机名</td><td>${HOSTNAME}</td></tr>
       <tr><td>启动时间（北京）</td><td>${toBeijingTime(STARTED_AT)}</td></tr>
-      <tr><td>访问次数</td><td>${visits}</td></tr>
+      <tr><td>哈哈访问次数</td><td>${visits}</td></tr>
+	  <tr><td>Node 版本</td><td>${process.version}</td></tr>
     </table>
     <footer>接口：<a href="/health">/health</a> · <a href="/api/info">/api/info</a></footer>
   </div>
