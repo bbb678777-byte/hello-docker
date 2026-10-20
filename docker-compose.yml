@@ -1,0 +1,17 @@
+# docker compose 编排文件：描述“这个项目要怎么跑起来”
+services:
+  app:                              # 服务名（自己起的名字）
+    build: .                        # 用当前目录的 Dockerfile 构建镜像
+    image: hello-docker:latest      # 构建出来的镜像名:标签
+    container_name: hello-docker    # 固定容器名，方便 docker logs hello-docker
+    ports:
+      - "3000:3000"                 # 宿主机端口:容器端口；绑定域名后可改成 "127.0.0.1:3000:3000"
+    environment:
+      - TZ=Asia/Shanghai            # 时区设为北京时间（影响日志时间）
+      - PORT=3000
+    restart: always                 # 容器崩溃或服务器重启后自动拉起
+    logging:                        # 限制日志大小，防止日志把磁盘写满
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"

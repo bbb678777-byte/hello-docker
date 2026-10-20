@@ -1,0 +1,17 @@
+# 构建镜像时不需要发送给 Docker 的文件，能加快构建、减小镜像
+.git
+.github
+.gitignore
+.gitattributes
+.dockerignore
+node_modules
+**/node_modules
+npm-debug.log*
+*.md
+Dockerfile
+docker-compose.yml
+deploy.sh
+.env
+.env.*
+.vscode
+.idea
